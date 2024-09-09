@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mypod
+  name: longhorn-simple-pod
 spec:
   containers:
-    - name: myfrontend
+    - name: volv
       image: nginx
       volumeMounts:
-      - mountPath: "/var/www/html"
+      - mountPath: /data
         name: mypd
   volumes:
-    - name: mypd
+    - name: volv
       persistentVolumeClaim:
-        claimName: myclaim
+        claimName: longhorn-simple-pvc
 ~                          
