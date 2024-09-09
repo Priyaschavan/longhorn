@@ -1,0 +1,2 @@
+kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v1.7.0/deploy/longhorn.yaml
+kubectl get pods -n longhorn-system
